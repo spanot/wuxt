@@ -1,14 +1,21 @@
 <template>
   <div>
-    <header class="header">
-      <Logo/>
+    <nav class="level">
+      <!-- Left side -->
+      <div class="level-left">
+        <div class="level-item">
+          <Logo />
+        </div>
+      </div>
 
-      <nav class="header__nav">
+      <!-- Right side -->
+      <div class="level-right">
         <nuxt-link to="/hello-world">Hello World</nuxt-link>
         <nuxt-link to="/sample-page">Sample Page</nuxt-link>
-      </nav>
-    </header>
-    <nuxt class="container"/>
+        <nuxt-link to="/a-propos">A Propos</nuxt-link>
+      </div>
+    </nav>    
+    <nuxt class="container" />
   </div>
 </template>
 
@@ -21,7 +28,6 @@ export default {
   }
 }
 </script>
-
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Nunito:700,600,400|Open+Sans:400,700');

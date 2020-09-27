@@ -1,6 +1,6 @@
 <template>
   <nuxt-link to="/">
-    <img src="/wuxt-logo.svg">
+    <img src="/wuxt-logo.svg" />
     <p>
       WUXT
       <span>JS</span>

@@ -47,7 +47,12 @@ module.exports = {
     [
       '~/modules/wp-api/index',
       {
-        endpoint: 'http://' + (process.env.WUXT_WP_CONTAINER ? process.env.WUXT_WP_CONTAINER : 'wp.wuxt') + ':80/wp-json/'
+        endpoint:
+          'http://' +
+          (process.env.WUXT_WP_CONTAINER
+            ? process.env.WUXT_WP_CONTAINER
+            : 'wp.wuxt') +
+          ':80/wp-json/'
       }
     ]
   ],
@@ -79,9 +84,15 @@ module.exports = {
   },
 
   generate: {
-    routes: function() {
+    routes() {
       return axios
-        .get('http://' + (process.env.WUXT_WP_CONTAINER ? process.env.WUXT_WP_CONTAINER : 'wp.wuxt') + ':80/wp-json/wuxt/v1/generate')
+        .get(
+          'http://' +
+            (process.env.WUXT_WP_CONTAINER
+              ? process.env.WUXT_WP_CONTAINER
+              : 'wp.wuxt') +
+            ':80/wp-json/wuxt/v1/generate'
+        )
         .then(({ data }) => data)
     }
   }
